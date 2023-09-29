@@ -2,6 +2,19 @@
   "name": "react-scaffold",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/markgalante/react-scaffold",
+  "author": {
+    "name": "Mark Galante"
+  },
+  "keywords": [
+    "React",
+    "CSS"
+  ],
+  "repository": {
+    "directory": "react-scaffold",
+    "url": "https://github.com/markgalante/react-scaffold"
+  },
+  "description": "A lightweight and un-opinionated styling schema for your React applications",
   "dependencies": {
     "@fontsource/source-sans-pro": "^4.5.11",
     "@reduxjs/toolkit": "^1.9.6",
@@ -69,6 +82,7 @@
     "workbox-strategies": "^6.6.0",
     "workbox-streams": "^6.6.0"
   },
+  "main": "index.ts",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
