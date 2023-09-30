@@ -18,6 +18,7 @@ module.exports = {
   rules: {
     // https://github.com/stylelint/stylelint/issues/4713
     'declaration-bang-space-before': null,
+    'order/properties-alphabetical-order': null,
     'plugin/no-low-performance-animation-properties': true,
     'plugin/no-unsupported-browser-features': [
       true,
@@ -27,6 +28,8 @@ module.exports = {
     ],
     'scale-unlimited/declaration-strict-value': [],
     'selector-max-id': 1,
+    'selector-max-compound-selectors': 4,
+    'color-named': null,
     'value-keyword-case': [
       'lower',
       {

@@ -25,7 +25,7 @@ const { increment, decrement } = counterSlice.actions;
 // Epic
 export const counterEpic = (actions$: Observable<Action>): Observable<Action> =>
   actions$.pipe(
-    ofType(decrement, increment),
+    ofType(decrement),
     // eslint-disable-next-line no-console
     tap((action) => console.log(`Epic: ${action.type}`)),
     ignoreElements()
