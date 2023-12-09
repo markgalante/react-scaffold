@@ -18,6 +18,8 @@ jobs:
         with:
           token: ${{ secrets.RELEASE_PLEASE_SECRET }}
           release-type: node
+        run: |
+        echo "RELEASE_PLEASE_SECRET: ${{ secrets.RELEASE_PLEASE_SECRET }}"
       # The logic below handles the npm publication:
       - uses: actions/checkout@v4
         # these if statements ensure that a publication only occurs when
