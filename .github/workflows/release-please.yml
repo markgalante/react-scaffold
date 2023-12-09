@@ -18,6 +18,7 @@ jobs:
           token: ${{ secrets.RELEASE_PLEASE_SECRET_TOKEN }}
           release-type: node
       # The logic below handles the npm publication:
+      # https://github.com/google-github-actions/release-please-action#automating-publication-to-npm
       - uses: actions/checkout@v4
         # these if statements ensure that a publication only occurs when
         # a new release is created:
@@ -33,6 +34,8 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
         if: ${{ steps.release.outputs.release_created }}
+        # Creates minor and major tags
+        # https://github.com/google-github-actions/release-please-action#creating-majorminor-tags
       - name: tag major and minor versions
         if: ${{ steps.release.outputs.release_created }}
         run: |
