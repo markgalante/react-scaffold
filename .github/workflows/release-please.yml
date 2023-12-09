@@ -13,9 +13,7 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - name: check github credentials
-        run: |
-        echo "RELEASE_PLEASE_SECRET: ${{ secrets.RELEASE_PLEASE_SECRET }}"
+      - run: echo "RELEASE_PLEASE_SECRET: ${{ secrets.RELEASE_PLEASE_SECRET }}"
       - uses: google-github-actions/release-please-action@v4
         id: release
         with:
